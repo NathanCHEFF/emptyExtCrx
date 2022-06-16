@@ -40,13 +40,10 @@ echo   ],                               >> "%Input%/manifest.json"
 echo   "web_accessible_resources": [    >> "%Input%/manifest.json"
 echo     "injected.js"                  >> "%Input%/manifest.json"
 echo   ],                               >> "%Input%/manifest.json"
-echo   "permissions": [                 >> "%Input%/manifest.json"
+echo   "host_permissions": [            >> "%Input%/manifest.json"
 echo     "<all_urls>"                   >> "%Input%/manifest.json"
 echo   ]                                >> "%Input%/manifest.json"
 echo }                                  >> "%Input%/manifest.json"
-"permissions": [
-        "https://www.example.com/*"
-    ],
 
 echo Files create
 )
