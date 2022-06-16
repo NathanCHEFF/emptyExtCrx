@@ -1,17 +1,17 @@
 @echo off
 set /p Input=Enter Extension name:
 
-echo Chose action:
+echo Chose action :
 echo [1] - Create Extension
 echo [2] - Pack to .crx (!needs chrome!)
 
-set /p Action
+set /p Action=Choose what you want 
+pause
 if %Action%==1 (
 md %Input%
 break>"%Input%/background.js"
 break>"%Input%/injected.js"
 break>"%Input%/manifest.json"
-
 
 echo console.log("%Input% download")                                  >> "%Input%/background.js"
 echo var script = document.createElement("script");           >> "%Input%/background.js"
@@ -45,6 +45,5 @@ echo }                                  >> "%Input%/manifest.json"
 echo Files create
 )
 if %Action%==2 (
-chrome.exe --pack-extension=%Input% --pack-extension-key=%Input%\%Input%.pem
+  chrome.exe --pack-extension=%Input% --pack-extension-key=%Input%\%Input%.pem
 )
-pause
