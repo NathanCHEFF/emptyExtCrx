@@ -6,7 +6,7 @@ echo [1] - Create Extension
 echo [2] - Pack to .crx (!needs chrome!)
 
 set /p Action=Choose what you want 
-pause
+
 if %Action%==1 (
 md %Input%
 break>"%Input%/background.js"
@@ -47,3 +47,4 @@ echo Files create
 if %Action%==2 (
   chrome.exe --pack-extension=%Input% --pack-extension-key=%Input%\%Input%.pem
 )
+pause
